@@ -1,0 +1,115 @@
+@keyframes moveLeftBall {
+  0%, 50% {
+    transform: rotate(0) translateX(0);
+  }
+  100% {
+    transform: rotate(30deg) translateX(-35px);
+  }
+}
+@keyframes moveRightBall {
+  0%, 50% {
+    transform: rotate(0) translateX(0);
+  }
+  100% {
+    transform: rotate(-30deg) translateX(35px);
+  }
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.quote {
+  background: url("../assets/img/quote-background.png") no-repeat;
+  padding: 100px 300px 100px 160px;
+  color: #fff;
+}
+.quote__text {
+  font-family: Lato, sans-serif;
+  font-size: 32px;
+  line-height: 46px;
+  letter-spacing: 4%;
+  max-width: 710px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.quote__text::before {
+  content: "";
+  position: absolute;
+  left: -68px;
+  top: -40px;
+  background: url("../assets/img/quote-icon.svg");
+  width: 102px;
+  height: 84px;
+}
+.quote__author {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-style: italic;
+  letter-spacing: 8%;
+}
+
+.benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  column-gap: 30px;
+  row-gap: 90px;
+}
+@media screen and (max-width: 768px) {
+  .benefits__grid {
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
+  }
+}
+.benefits__item {
+  padding: 20px 30px;
+  background-color: aqua;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.swing {
+  display: flex;
+}
+.swing__item {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: linear-gradient(#2b5e82, #f7f7f7);
+  box-shadow: 0 0 3px 1px #9a929a;
+}
+.swing__item_left {
+  animation: moveLeftBall 0.9s ease-in-out infinite alternate;
+  animation-delay: 0s;
+}
+.swing__item_right {
+  animation: moveRightBall 0.9s ease-in-out infinite alternate;
+  animation-delay: 1s;
+}
+
+.shadow {
+  display: flex;
+  padding-top: 24px;
+}
+.shadow__item {
+  width: 35px;
+  height: 0.55em;
+  border-radius: 50%;
+  background: linear-gradient(rgba(43, 94, 130, 0.7), rgba(247, 247, 247, 0.63));
+  filter: blur(2.2px);
+}/*# sourceMappingURL=main.css.map */
