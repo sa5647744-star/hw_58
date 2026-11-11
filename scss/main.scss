@@ -113,5 +113,15 @@ body {
         border-radius: 50%;
         background: linear-gradient(rgb(43 94 130 / 70%), rgb(247 247 247 / 63%));
         filter: blur(2.2px);
-    }
+    
+    &_left {
+            animation: moveLeftshadow 0.9s ease-in-out infinite alternate;
+            animation-delay: 0s;
+        }
+
+        &_right {
+            animation: moveRightshadow 0.9s ease-in-out infinite alternate;
+            animation-delay: 1s;
+        }
+}
 }

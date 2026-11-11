@@ -17,3 +17,21 @@
         transform: rotate(-30deg) translateX(35px); 
     }
 }
+@keyframes moveLeftshadow {
+    0%, 50% {
+        transform: rotate(0) translateX(0);
+    }
+
+    100% {
+        transform:  translateX(-35px); 
+    }
+}
+@keyframes moveRightshadow {
+    0%, 50% {
+        transform: rotate(0) translateX(0);
+    }
+
+    100% {
+        transform: rotate(-30deg) translateX(35px); 
+    }
+}
